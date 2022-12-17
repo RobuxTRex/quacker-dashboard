@@ -1,0 +1,92 @@
+import { Callout, Tab, Tabs } from 'nextra-theme-docs'
+
+# Deploy your own Discord Bot!
+
+<Callout type="info">
+    This guide is a WORK IN PROGRESS and is CURRENTLY INCOMPLETE!
+</Callout>
+
+<Callout type="warning">
+    This page is a detailed explanation on how to make your own Discord bot! This guide assumes you:
+    - Have basic experience with JavaScript
+</Callout>
+
+Making your own Discord bot takes time, effort and skill.
+This guide uses <a href="https://www.discord.js.org">**the discord.js library**</a>, so if you are planning to use anything but discord.js, this is not the place for you.
+
+## Making an application
+
+<Callout type="info">
+    Following this guide can also grant you the Discord Active Developer profile badge.
+    **Do not run any executables you find online claiming to give you this badge!**
+</Callout>
+
+First of all, go to <a href="https://discord.com/developers">the Discord Developer Portal</a> and **ensure you are logged into the correct Discord Account**!
+Once in the Developer Portal, select 'New Application', type in the name of your Bot in the 'Name' field, and make sure the 'Team' field is set to Personal - don't forget to accept Discord's Developer Terms of Service & Policies!
+
+<Callout type="warning">
+    Once you have clicked 'Add Bot', you will create a user profile with the Bot tag. This action is irreversable!
+</Callout>
+
+Once you have made the application, click the 'Bot' button in the sidebar and click 'Add Bot'.
+Now that you have officially created your own bot, you must invite it to a Discord server!
+To invite your bot to your Discord server, click on 'oAuth2' on the sidebar, click on 'URL Generator' and then when scopes are requested, click on 'Bot', scroll down, and click on 'Administrator'.
+Then when an invite link has been generated, copy it and paste it into your browser. Then select the server you would like to invite it into (and also input your 2FA verification code if you have 2FA), and bam, you're in!
+
+<Callout type="warning">
+    Administrator is a dangerous permission to give your bot as if your bot gets hacked, the malicious intruder can do whatever it wants to any servers it is in under the Bot's account. If you are going to release your bot to the general public, ensure that you only have the correct permissions selected, otherwise you will break your trust with the user who is inviting your bot.
+</Callout>
+
+## Installing Packages
+
+To start, please open up your preferred text editor.
+
+<Callout type="info">
+    We suggest you use Microsoft's <a href="code.visualstudio.com">VSCode</a> text editor as this guide was build with it in mind.
+</Callout>
+
+First of, make sure you have the latest version of Node.js installed.
+You can check by running `node -v` in your terminal.
+
+### Installing Node
+
+<Callout type="warning">
+    **This section assumes you are running Windows 8.1 or higher.**
+
+    If you are running Windows 7, the latest version of Node is 13.6.0, if you are running Windows XP or Vista, Node 6.0.0 is the latest version.
+    Node.js is not compatible with anything below Windows XP!
+</Callout>
+
+If you already have Node.js installed, please skip this sub-section, otherwise, please read this entire sub-section.
+
+To install Node, go to <a href="nodejs.org">Node's official website</a> and download the latest LTS release.
+Follow the installation as usual, and then restart your text editor (or terminal) once installed.
+Then run `node -v` in your terminal to check if the installation was a success.
+
+If it was, then you can continue on with Installing Packages, otherwise, attempt to run the installation again.
+
+### Installing Packages
+
+On entering the terminal, run:
+
+<Tabs items={['npm', 'yarn', 'pnpm']}>
+    <Tab>
+        ```
+        npm init -y
+        npm install discord.js
+        ```
+    </Tab>
+    <Tab>
+        ```
+        yarn init -y
+        yarn add discord.js
+        ```
+    </Tab>
+    <Tab>
+        ```
+        pnpm init
+        yarn add discord.js
+        ```
+    </Tab>
+</Tabs>
+
