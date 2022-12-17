@@ -8,7 +8,7 @@ export default {
     },
     banner: {
         key: 'Quacker-Incomplete',
-        text: <a>This site is a proof of concept! Quacker is still highly in development.</a>,
+        text: <span>This site is a proof of concept! Quacker is still highly in development.</span>,
         dismissible: false,
     },
 }
